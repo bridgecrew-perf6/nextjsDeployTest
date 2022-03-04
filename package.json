@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 8080",
     "lint": "next lint",
-    "deploy": "next build && next start"
+    "deploy": "git pull && next build && pm2 start ecosystem.config.js "
   },
   "dependencies": {
     "next": "12.1.0",
