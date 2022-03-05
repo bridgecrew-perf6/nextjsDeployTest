@@ -2,12 +2,20 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
-  name: string;
+  name?: string;
+  imPost?: string;
 };
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: "John Doe" });
+  if (req.method === "POST") {
+    console.log(req.body);
+    res.status(200).json({ imPost: "hi" });
+  } else if (req.method === "GET") {
+    console.log(req.query);
+
+    res.status(200).json({ name: "John Doe" });
+  }
 }

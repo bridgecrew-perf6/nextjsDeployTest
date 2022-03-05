@@ -7,18 +7,25 @@
     "build": "next build",
     "start": "next start -p 8080",
     "lint": "next lint",
-    "deploy": "git pull && next build && pm2 start ecosystem.config.js "
+    "devServer": "node server.js",
+    "start-echo": "npm run build && pm2 reload ecosystem.config.js --only deploytest --env production",
+    "start-server": "npm run build && cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "axios": "^0.26.0",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.3",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
+    "ts-node": "^10.6.0",
     "typescript": "4.6.2"
   }
 }
