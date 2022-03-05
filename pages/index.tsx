@@ -6,6 +6,10 @@ import { useRouter } from "next/router";
 import { CSSProperties } from "react";
 import styles from "../styles/Home.module.css";
 
+export async function getServerSideProps() {
+  return { props: { initialPropsCounter: 1 } };
+}
+
 const Home: NextPage = () => {
   const style: CSSProperties = {
     borderStyle: "solid",

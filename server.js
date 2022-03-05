@@ -20,9 +20,10 @@ nextApp.prepare().then(() => {
 
   // SIGNIT 시그널을 받았는지 여부, 앱이 곧 종료 될 것임을 의미함.
   let isNextAppGoingToBeClose = false;
+
   server.use((req, res, next) => {
+    // 앱이곧 종료될 경우
     if (isNextAppGoingToBeClose) {
-      // 앱이곧 종료될 경우
       // 커넥션을 끊어버린다
       res.set("Connection", "close");
     }
@@ -57,7 +58,7 @@ nextApp.prepare().then(() => {
       console.log(`sent to pm2 with ready message at ${new Date()}`);
     }
   });
-  process.on("SIGINT", function () {
+  process.on("SIGINT", () => {
     console.log("앱이 곧 종료됩니다. received signit signal");
 
     // 앱이 곧 꺼지개 만들고 서버와의 커넥션도 닫게만든다
