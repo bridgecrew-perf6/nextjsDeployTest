@@ -55,7 +55,7 @@ nextApp.prepare().then(() => {
     // 서버가 켜지면 pm2에게 구동이 완료됨을 전달
     if (process.send) {
       process.send("ready");
-      console.log(`sent to pm2 with ready message at ${new Date()}`);
+      console.log(`sent message of ready to pm2 at ${new Date()}`);
     }
   });
   process.on("SIGINT", () => {

@@ -8,7 +8,7 @@
     "start": "next start -p 8080",
     "lint": "next lint",
     "devServer": "node server.js",
-    "start-eco": "npm run build && pm2 reload ecosystem.config.js --only deploytest --env production",
+    "start-eco": "npm i && git pull origin main && npm run build && pm2 reload ecosystem.config.js --only deploytest --env production",
     "start-server": "npm run build && cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
