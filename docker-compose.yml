@@ -1,0 +1,10 @@
+services:
+  nextServer:
+    build: .
+    image: next_server
+    container_name: nextServer
+    ports:
+      - 80:8080
+    volumes:
+      - ./:/usr/src/app/.
+version: "3"

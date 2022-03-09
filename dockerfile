@@ -10,5 +10,5 @@ RUN npm install && npm install pm2 -g
 COPY ./ ./
 RUN npm run build
 
-# CMD ["npm", "run", "start-eco-container"]
+
 CMD npm run start-eco-container && pm2 logs
