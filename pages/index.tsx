@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Link href="/About" passHref>
-        <div style={style}>goTOAbout1111asd12311</div>
+        <div style={style}>goTOAbout111112311</div>
       </Link>
       <Link href="/test1/Test2?id=asd" passHref>
         <div style={{ ...style, marginTop: "10px" }}>goToTest</div>
