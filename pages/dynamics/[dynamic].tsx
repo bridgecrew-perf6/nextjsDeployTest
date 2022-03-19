@@ -28,7 +28,7 @@ function Dynamics() {
       <Head>
         <title>난 다이나믹 라우트</title>
       </Head>
-      <div onClick={getDataHandler}>get api 받아보기</div>
+      <div onClick={getDataHandler}>get apiqweqwe 받아보기</div>
       <div onClick={postDataHandler}>post api 받아보기</div>
       <div onClick={dynamicApi}>다이나믹 받아보기</div>
       <div onClick={() => window.history.back()}>
