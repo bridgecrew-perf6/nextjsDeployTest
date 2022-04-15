@@ -6,14 +6,14 @@ then
         # B가 실행 중인 경우
         START_CONTAINER=a
         TERMINATE_CONTAINER=b
-        START_PORT=3000
-        TERMINATE_PORT=3001
+        START_PORT=2000
+        TERMINATE_PORT=2001
 else
         # A가 실행 중인 경우
         START_CONTAINER=b
         TERMINATE_CONTAINER=a
-        START_PORT=3001
-        TERMINATE_PORT=3000
+        START_PORT=2001
+        TERMINATE_PORT=2000
 fi
 
 echo "kukemeet-${START_CONTAINER} up"

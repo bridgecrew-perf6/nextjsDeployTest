@@ -3,4 +3,4 @@ services:
   kuke:
     build: .
     ports:
-      - 3000:8080
+      - 2000:8080
